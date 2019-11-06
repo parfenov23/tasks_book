@@ -1,0 +1,223 @@
+.discountCashBack{
+  .userContact{
+    position: relative;
+    .findContact{
+      display: none;
+      list-style-type: none;
+      padding-left: 0;
+      position: absolute;
+      background-color: white;
+      z-index: 9;
+      width: 100%;
+      padding: 8px 12px 8px 12px;
+      max-height: 140px;
+      overflow: auto;
+      li{
+        padding: 4px;
+        &:hover{
+          background-color: #ddd;
+          cursor: pointer;
+        }
+      }
+    }
+    .deleteContactBtn{
+      display: none;
+    }
+    .deleteContactBtn, .contactAdd{
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-right: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+  }
+}
+.saleDiscount{
+  display: flex;
+  justify-content: space-between;
+  .sale_discount{
+    height: 41px;
+  }
+}
+.searchProductItem{
+  display: none;
+  list-style-type: none;
+  padding-left: 0;
+  position: absolute;
+  background-color: white;
+  z-index: 9;
+  width: 100%;
+  padding: 8px 12px 8px 12px;
+  max-height: 140px;
+  overflow: auto;
+  li{
+    padding: 4px;
+    &:hover{
+      background-color: #ddd;
+      cursor: pointer;
+    }
+  }
+}
+
+.received_cash + .clearInput{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.saveOrderRequest{
+  margin-left: 4px;
+  display: none;
+}
+
+.saleAllItemCashbox{
+  .tableCol6{
+    .col1{
+      width: 20%;
+    }
+    .col2{
+      width: 40%;
+    }
+    .col3{
+      width: 15%;
+    }
+    .col4{
+      width: 10%;
+    }
+    .col5{
+      width: 10%;
+    }
+    .col6{
+      width: 5%;
+    }
+  }
+  
+  .tableCol7{
+    .col1{
+      width: 20%;
+    }
+    .col2{
+      width: 35%;
+    }
+    .col3{
+      width: 15%;
+    }
+    .col4{
+      width: 10%;
+    }
+    .col5{
+      width: 10%;
+    }
+    .col6{
+      width: 10%;
+    }
+    .col7{
+      width: 5%;
+    }
+  }
+
+  .headerTableSale{
+    div{
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .col1, .col2, .col3, .col4, .col5, .col6{
+    padding-right: 4px;
+  }
+}
+
+.allItemsSale{
+  background-color: white;
+  padding: 4px;
+  font-size: 16px;
+  .parentItemSale{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #b5b5b5;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    padding-top: 4px;
+
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    &:last-child{
+     border-bottom: 0px solid;
+     margin-bottom: 0px;
+   }
+
+   .endSumPosition{
+    line-height: 36px;
+  }
+
+  .material-form-group{
+    padding-top: 0;
+    .countItems{
+      max-width: 56px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+
+
+  .formLoadContentPrice{
+    .parentSelectMd{
+      min-width: 90px;
+    }
+  }
+}
+}
+
+.table.table-material{
+  .headerTableSale{
+    display: flex;
+    background-color: #424242;
+    justify-content: space-between;
+    padding: 4px 8px 4px 20px;
+    .th{
+      color: white;
+      font-size: medium;
+      font-weight: bold;
+    }
+  }
+}
+.list-group-item{
+  i.iconCashbox{
+    margin-top: 10px;
+    margin-right: 4px;
+    font-size: 18px;
+  }
+  a.btn{
+    i.close_sale{
+      font-size: 14px;
+      line-height: 27px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .saleAllItemCashbox{
+    .list-group-item.col-md-9{
+      padding: 0px 0px 24px 0px;
+    }
+  }
+  .allItemsSale{
+    font-size: 12px;
+    .selectProductItem{
+      min-width: 100% !important;
+    }
+  }
+}

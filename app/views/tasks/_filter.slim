@@ -1,0 +1,20 @@
+.selectFilter
+  .title Статус
+  .selectInlineProvider
+    - all_type = [{title: 'Все', id: 'all'}, {title: 'Не выполнены', id: 'run'}, {title: 'Закрытые', id: 'close'}, {title: 'На паузе', id: 'paused'}]
+    = render "home/common_select_new", {arr_li: all_type, default: params[:status].present? ? params[:status] : all_type.first[:id], name_input: "status", add_class: "changeFilterSelect noInit"}
+- if params[:type] != "to_me"
+  .selectFilter
+    .title На кого
+    .selectInlineProvider
+      - all_users = [{title: "Все", id: ""}] + User.all.map{|user| {title: user.email, id: user.id}}
+      = render "home/common_select_new", {arr_li: all_users, default: params[:from].present? ? params[:from] : all_users.first[:id], name_input: "from", add_class: "changeFilterSelect noInit"}
+
+.selectFilter
+  .title Выполнить до
+  .selectInlineProvider
+    = render "home/common_input", {value: params[:deadline], name: "deadline", add_class: "datepicker"}
+
+.selectFilter
+  - btn_url = params[:type].present? ? "/tasks/#{params[:type]}" : "/tasks"
+  a.btn.btn-primary-material.js__load_content data-type="priority" href=btn_url Очистить фильтр

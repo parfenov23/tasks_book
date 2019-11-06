@@ -1,0 +1,15 @@
+<div class="load__content">
+  <h1>Home#index</h1>
+  <p>Find me in app/views/home/index.html.erb</p>
+
+  <% if user_signed_in? %>
+  <span>Здравствуйте, <%= current_user.email %></span>
+  <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+  <%= link_to 'Редактировать профиль', edit_user_registration_path %>
+
+  <% else %>
+  <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>

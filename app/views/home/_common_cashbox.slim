@@ -1,0 +1,5 @@
+- material rescue material = true
+- add_class_material = material ? "material-form-group active" : nil
+- add_class_select rescue add_class_select = nil
+.form-group class=add_class_material
+  = render "common_select_new", {arr_li: [{title: "Наличные", id: "cash"}, {title: "Visa", id: "visa"}], default: "cash", name_input: "cashbox_type", add_class: add_class_select}

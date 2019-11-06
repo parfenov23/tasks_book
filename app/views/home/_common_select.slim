@@ -1,0 +1,5 @@
+.mad-select class=(add_class rescue nil)
+  ul
+    - arr_li.each do |li|
+      li data-value=li.last = li.first
+  input type="hidden" name=(name_input rescue nil) class=(class_input rescue nil) value=default

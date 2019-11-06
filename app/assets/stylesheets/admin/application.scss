@@ -1,0 +1,364 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_tree ../admin/pages
+ */
+
+
+ .imgItem {
+  padding-bottom: 5px;
+  .checkedImgPrev {
+    margin-right: 10px;
+  }
+  .imgMini {
+    width: 140px;
+  }
+  .removeImg {
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}
+
+.list-group.row .list-group-item {
+  &.col-md-6, &.col-md-3 {
+    display: flex;
+  }
+}
+
+.closeTask{
+  background-color: #c1d041 !important;
+}
+.pausedTask{
+  background-color: #b1b1b1 !important
+}
+
+
+.plusBtn{
+  -moz-transform: rotate(45deg); /* Для Firefox */
+  -ms-transform: rotate(45deg); /* Для IE */
+  -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(45deg); /* Для Opera */
+  transform: rotate(45deg);
+}
+
+.form-group .all_order_items .order_item {
+  margin-top: 4px;
+}
+
+.table_cashbox_page {
+  .info_column {
+    width: 60%;
+  }
+  .table_title_cash {
+    background-color: #656565;
+    color: #fff;
+    border: 1px solid #656565 !important;
+  }
+}
+
+.panel_gray_common {
+  background-color: #424242;
+  color: #fff;
+  .mad-select {
+    background-color: #fff;
+    ul li.selected {
+      font-weight: 100;
+    }
+  }
+}
+
+.list-group-item {
+  form.def_pay {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .type_cashbox .form-group {
+    width: calc(100% + 24px);
+    margin-bottom: 0;
+    padding-right: 34px;
+    height: 28px;
+    .mad-select {
+      border-bottom: initial;
+    }
+  }
+}
+
+.saleAllItemCashbox {
+  width: 100%;
+  .titlePrice {
+    font-size: 34px;
+    text-align: center;
+  }
+  .list-group-item:first-child {
+    background-color: initial;
+    border: 0;
+    padding-top: 0;
+  }
+  .parentItemSale .mad-select {
+    min-width: 164px;
+  }
+
+  .actionBtnSale {
+    .priceItemSale {
+      height: 40px;
+      text-align: center;
+      line-height: 26px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn {
+      width: 100%;
+      height: 40px;
+      margin-top: 4px;
+      font-size: 18px;
+    }
+  }
+  .allItemsSale {
+    .countItems {
+      max-width: 82px;
+    }
+    .selectPrice {
+      max-width: 72px;
+    }
+    .createFromBarcodeScan .barcode {
+      input {
+        display: none;
+      }
+      span {
+        display: initial !important;
+      }
+    }
+    .parentSelectMd ul.mad-select-drop.show {
+      max-height: 290px;
+    }
+    .parentItemSale .formLoadContentTaste .mad-select {
+      min-width: 248px;
+    }
+  }
+}
+
+.formCreate {
+  display: flex;
+  min-height: 259px;
+}
+
+.list-group-item {
+  &.col-md-3 .allProductCalc {
+    padding-top: 8px;
+  }
+  .commonInfo {
+    display: flex;
+    justify-content: space-between;
+    span {
+      width: inherit;
+    }
+  }
+}
+
+.btn-margin-left {
+  margin-left: 4px;
+}
+
+.displayFlex {
+  display: flex;
+  justify-content: space-between;
+  &.normal{
+    justify-content: normal;
+  }
+}
+
+#alert {
+  position      : fixed;
+  display       : none;
+  z-index       : 1000;
+  bottom        : 20px;
+  left          : 50%;
+  height        : 52px;
+  padding       : 0 72px 0 16px;
+  transform     : translateX(-50%);
+  background    : rgba(0, 0, 0, .72);
+  border-radius : 4px;
+  color         : #FFF;
+  text-align    : left;
+  line-height: 52px;
+  .close {
+    position : absolute;
+    top      : 14px;
+    right    : 14px;
+    color    : #FFF;
+    cursor   : pointer;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .displayFlex {
+    display: block;
+  }
+}
+
+.blankPage{
+  text-align: center;
+  padding-top: 5%;
+  color: #777777;
+  .title{
+    h2{
+      display: inline-block;
+      padding-left: 2px;
+      padding-right: 2px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+nav.navbar{
+  .user_info{
+    .ava{
+      padding-top: 8px;
+      cursor: pointer;
+      img{
+        border-radius: 50%;
+        height: 34px;
+      }
+    }
+  }
+}
+
+img.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.popupUserAvaInfo{
+  position: absolute;
+  background-color: white;
+  right: 0;
+  margin-right: 8px;
+  margin-top: 12px;
+  display: none;
+  .triangle{
+    border-color: transparent;
+    border-bottom-color: #fff;
+    border-style: dashed dashed solid;
+    border-width: 0 8.5px 8.5px;
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 12px;
+    top: -8px;
+  }
+  .info{
+    width: 128px;
+    ul{
+      padding-left: 0;
+      margin-top: 8px;
+      margin-left: 4px;
+      margin-right: 4px;
+      li{
+        list-style: none;
+        text-align: right;
+        padding: 4px 8px 4px 8px;
+        border-bottom: 1px solid #d8d8d8;
+
+
+        &:first-child {
+
+        }
+
+        &:last-child{
+          border-bottom: none;
+        }
+        a{
+          text-decoration: none;
+          color: #333;
+          display: block;
+        }
+        &:hover{
+          background-color: #424242;
+          a{
+            color: white;
+          }
+          
+        }
+      }
+    }
+  }
+
+}
+
+.selectFilter{
+  display: inline-flex;
+  padding-right: 14px;
+  .form-group{
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    input{
+      height: 40px;
+    }
+  }
+  .title{
+    line-height: 38px;
+  }
+}
+
+form.form-horizontal {
+  .custom-file{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    input{
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 34px;
+      margin: 0;
+      opacity: 0;
+    }
+    label{
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      height: 34px;
+      padding: .375rem .75rem;
+      line-height: 25px;
+      color: #555;
+      background-color: #fff;
+      border: 1px solid #26a69a;
+      border-radius: .25rem;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        display: block;
+        height: 32px;
+        padding: .375rem .75rem;
+        line-height: 25px;
+        color: white;
+        content: "Browse";
+        background-color: #26a69a;
+        border-left: 1px solid #ced4da;
+        border-radius: 0 .25rem .25rem 0;
+      }
+    }
+  }
+}
+

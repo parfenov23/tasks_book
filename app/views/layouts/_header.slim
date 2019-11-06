@@ -1,0 +1,19 @@
+nav.navbar.navbar-default.block-material
+  .allNavElem
+    - if current_user.present?
+      .btnOpenleftBar onclick="openNav()"
+        |&#9776;
+    .headerTitle 
+      = curr_title_admin_header(@add_title) || "Tasks Book"
+    - if current_user.present?
+      .user_info
+        .ava.js_openUserPopupInfo
+          img src=user_ava(current_user.avatar)
+        .popupUserAvaInfo.block-material
+          .triangle
+          .info
+            ul
+              li 
+                = link_to 'Профиль', edit_user_registration_path
+              li 
+                = link_to 'Выйти', destroy_user_session_path, :method => :delete

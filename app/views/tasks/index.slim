@@ -1,0 +1,21 @@
+.load__content
+  script id="js_template_all" type="text/x-jquery-tmpl"
+    = render "tasks/js_template_all"
+  script id="js_template_item" type="text/x-jquery-tmpl"
+    = render "tasks/js_template_item"
+  .list-group.row
+    .list-group-item.panel_gray_common
+      = render "tasks/filter"
+
+    /   a.btn.btn-success-material href="/admin/buy/search" Поиск
+    .allTasks
+      - @tasks.each do |task|
+        .list-group-item.col-md-6.removeParentBlock class="#{task.status}Task"
+          span
+            a href='/tasks/#{task.id}/info'
+              = task.title
+          - if task.status != "close"
+            a.btn.btn-success-material.pull-right.js_loadContentInOtherPopup data-title="Закрыть" href="/tasks/#{task.id}/edit" class="btn_def_pay_#{task.id}" ✔
+          a.btn.btn-danger-material.pull-right.js__remove href="/tasks/#{task.id}/remove" data-method='delete'
+            | &#10006;
+  = render "home/common_popup_new_model", {m_model: Task.new, title: "Добавление новой задачи"}

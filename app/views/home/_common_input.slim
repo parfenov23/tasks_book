@@ -1,0 +1,8 @@
+- label rescue label = true
+- clear_btn rescue clear_btn = false
+.form-group.material-form-group class=(label ? "" : "no_label")
+  input.form-control name=(name rescue nil) type="text" value=(value rescue nil) class=(add_class rescue nil) required=true placeholder=(!label ? title : nil )
+  - if label
+    label = title
+  - if clear_btn
+    .clearInput ✖

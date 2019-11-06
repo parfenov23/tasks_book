@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'cashbox';
+  src: url(/admin/fonts/cashbox.eot?3yv9dd);
+  src: url(/admin/fonts/cashbox.eot?3yv9dd#iefix) format("embedded-opentype"), url(/admin/fonts/cashbox.ttf?3yv9dd) format("truetype"), url(/admin/fonts/cashbox.woff?3yv9dd) format("woff"), url(/admin/fonts/cashbox.svg?3yv9dd#cashbox) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.iconCashbox {
+  font-family: "cashbox" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dollar-symbol:before {
+  content: "";
+}
+
+.icon-credit-card2:before {
+  content: "";
+}
+
+.icon-dollar-coins:before {
+  content: "";
+}
+
+.icon-wallet:before {
+  content: "";
+}
+
+.icon-cashbox:before {
+  content: "";
+}
+
+.icon-cart:before {
+  content: "";
+}
+
+.icon-coin-dollar:before {
+  content: "";
+}
+
+.icon-credit-card:before {
+  content: "";
+}
+
+.user-tie:before {
+  content: "";
+}
+
+.bars:before {
+  content: "";
+}
+
+.averege:before {
+  content: "";
+}
+
+.displayFlex {
+  .leftTableInfo, .rightTableInfo {
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+  }
+  .panel_gray_common {
+    height: 62px;
+    line-height: 36px;
+  }
+}
+
+.leftContentBar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  z-index: 5;
+  padding-bottom: 60px;
+  .listInfo {
+    padding: 16px;
+    .item {
+      font-size: 18px;
+      padding: 4px;
+      padding: 4px;
+      border-bottom: 1px solid #424242;
+      margin-bottom: 4px;
+      &:hover {
+        background-color: #424242;
+        color: #fff;
+        cursor: pointer;
+      }
+      &.under {
+        padding-left: 16px;
+      }
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.headerBar {
+  position: fixed;
+  left: 240px;
+  top: 50px;
+  width: calc(100% - 240px);
+  background-color: #fff;
+  padding: 8px;
+  z-index: 4;
+  .displayFlex {
+    display: flex !important;
+  }
+}
+
+.contentCashbox {
+  margin-left: 240px;
+  margin-top: 57px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.allMiniBlockStatistic {
+  margin-bottom: 24px;
+  .miniBlockStatistic {
+    width: 100%;
+    height: 80px;
+    margin-right: 12px;
+    margin-left: 12px;
+    background-color: #fff;
+    text-align: center;
+    padding: 8px;
+    .title {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.js_closeLeftBar {
+  position: absolute;
+  right: 12px;
+  font-size: 28px;
+  top: 0;
+  color: #fff;
+  display: none;
+}
+
+.openMobileLeftBar {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  bottom: 0;
+  background-color: #fff;
+  padding: 16px;
+  left: 0;
+  z-index: 5;
+  display: none;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 760px) {
+  .leftContentBar {
+    display: none;
+  }
+  .headerBar {
+    left: 0;
+    width: 100%;
+  }
+  .openMobileLeftBar, .js_closeLeftBar {
+    display: block;
+  }
+  .contentCashbox {
+    margin-left: 0;
+    .allMiniBlockStatistic .miniBlockStatistic {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

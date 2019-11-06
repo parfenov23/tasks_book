@@ -1,0 +1,12 @@
+- @popup = title
+- @model = m_model
+.fab
+  i.material-icons.fab-icon add
+  .cntt-wrapper
+    .fab-hdr
+      a.closeBtn href="javascript:void(0)" onclick="closeAllOtherPopup()" ×
+      h3 = @popup
+    .conteinerPopup
+      = render "#{@model.class.first_url}/form"
+  
+  

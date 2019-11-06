@@ -1,0 +1,12 @@
+.parentSelectMd class=(add_class rescue nil)
+  .madSelect
+    div class='titleSelect' Не выбрано
+    i class="material-icons" arrow_drop_down
+
+  .listSelectMd
+    ul
+      - arr_li.each do |li|
+        - add_data = li[:add_data].present? ? li[:add_data] : {}
+        - data_hash = {'data-value' => li[:id]}.merge( add_data )
+        li *data_hash = li[:title]
+    input type="hidden" name=(name_input rescue nil) class=(class_input rescue nil) value=(default rescue nil)

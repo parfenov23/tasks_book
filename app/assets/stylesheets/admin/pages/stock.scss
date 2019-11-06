@@ -1,0 +1,10 @@
+.titleFlex{
+  display: flex;
+  justify-content: space-between;
+  .leftContent{
+    width: 100%;
+  }
+  input{
+    max-width: 150px;
+  }
+}

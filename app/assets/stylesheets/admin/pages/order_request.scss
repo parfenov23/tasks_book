@@ -1,0 +1,50 @@
+.inlineBlockOrder {
+  display: flex;
+  form {
+    display: flex;
+    margin-bottom: 0;
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.noBorderListGroup {
+  box-shadow: initial;
+  .list-group-item {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .rightContent {
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+}
+
+.all_order_items {
+  padding-bottom: 24px;
+  .order_item {
+    display: flex;
+    justify-content: space-between;
+    .selectItem {
+      width: 60%;
+      select {
+        width: 100%;
+        height: 40px;
+      }
+    }
+    .countItem input {
+      width: 34px;
+      height: 40px;
+      text-align: center;
+      margin-right: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .noBorderListGroup .rightContent {
+    justify-content: flex-start;
+  }
+}

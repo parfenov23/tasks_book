@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'cashbox';
+  src:  url('/admin/fonts/cashbox.eot?3yv9dd');
+  src:  url('/admin/fonts/cashbox.eot?3yv9dd#iefix') format('embedded-opentype'),
+    url('/admin/fonts/cashbox.ttf?3yv9dd') format('truetype'),
+    url('/admin/fonts/cashbox.woff?3yv9dd') format('woff'),
+    url('/admin/fonts/cashbox.svg?3yv9dd#cashbox') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cashbox' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-dollar-symbol{
+  width: 100px;
+}
+.icon-dollar-symbol:before {
+  content: "\e900";
+}
+.icon-credit-card2:before {
+  content: "\e901";
+}
+.icon-dollar-coins:before {
+  content: "\e902";
+}
+.icon-wallet:before {
+  content: "\e903";
+}
+.icon-cashbox:before {
+  content: "\e904";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-credit-card:before {
+  content: "\e93f";
+}

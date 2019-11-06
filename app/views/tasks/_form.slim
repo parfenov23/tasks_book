@@ -1,0 +1,23 @@
+- action_url = @model.id.nil? ? "/tasks" : "/tasks/#{@model.id}"
+- method = @model.id.nil? ? "post" : "put"
+
+form.form-horizontal action="#{action_url}" method="post" enctype="multipart/form-data"
+  = render "home/common_input", {title: "Заголовок", value: @model.title, name: "tasks[title]"}
+  .form-group.material-form-group
+    textarea.form-control name="tasks[description]" type="text" required=true
+      = @model.description
+    label Описание
+  - deadline = @model.deadline.nil? ? Time.now.strftime("%d/%m/%Y") : @model.deadline.strftime("%d/%m/%Y")
+  = render "home/common_input", {title: "Выполнить до:", value: deadline, name: "tasks[deadline]", add_class: "datepicker"}
+  .form-group.material-form-group.active
+    label Назначить
+    - all_users = User.all.map{|user| {title: user.email, id: user.id}}
+    = render "home/common_select_new", {arr_li: all_users, default: (@model.user_id || all_users.first[:id]), name_input: "tasks[user_id]", add_class: "defaultInitMdSelect"}
+  .form-group.material-form-group.active
+    label Статус
+    - all_status = [{title: "В работе", id:"run"}, {title: "Закрыто", id: "close"}, {title: "На паузе", id: "paused"}]
+    = render "home/common_select_new", {arr_li: all_status, default: (@model.status || all_status.first[:id]), name_input: "tasks[status]", add_class: "defaultInitMdSelect"}
+    
+  input type="hidden" name="tasks[creater_id]" value=current_user.id
+  input type="hidden" name="_method" value="#{method}"
+  .btn.btn-primary-material.submit class=(@model.id.nil? ? "js_submitNewModel" : "js_submitUpdateModel")  type="submit" formnovalidate=true Сохранить

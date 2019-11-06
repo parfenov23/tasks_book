@@ -1,0 +1,65 @@
+.user_items_menu {
+  .user_info {
+    border-bottom: 1px solid #c1c1c1;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    .ava {
+      text-align: center;
+      img {
+        border-radius: 50%;
+        width: 64px;
+      }
+    }
+    .changeUserInfo {
+      text-align: center;
+      color: #969393;
+      font-size: 12px;
+      padding-top: 8px;
+    }
+  }
+  .userMenu a {
+    padding: 8px 8px 8px 4px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+.userStatistic {
+  .smile {
+    font-size: 14px;
+    color: #8a8a8a;
+    padding-left: 24px;
+  }
+  .noBorderTop td {
+    border-top: 0 solid;
+  }
+}
+
+.managerBorder {
+  display: flex;
+  justify-content: space-between;
+  .user_items_menu {
+    min-width: 204px;
+  }
+  .userStatistic {
+    margin-left: 8px;
+    min-width: 271px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 498px) {
+  .managerBorder {
+    display: block;
+    .userStatistic {
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }
+}
