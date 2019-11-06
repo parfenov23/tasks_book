@@ -1,5 +1,5 @@
 //= require_tree ./pages
-//= require vendor/serialize_file
+//= require_tree ./vendor
 
 
 show_error = function (text, duration) {
